@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Plugins & Advanced Features Demo</title>
+    
+    <!-- jQuery & jQuery UI -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css"> -->
+
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- AOS (Animate On Scroll) -->    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+    
+    <!-- Lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- CounterUp Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    
+    <!-- Smooth Scroll Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+<script src="./SCRIPT.JS"></script>
+    
+  
+ 
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">jQuery Demo</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="smooth-scroll">Home</a></li>
+                    <li><a href="#jquery-ui" class="smooth-scroll">jQuery UI</a></li>
+                    <li><a href="#counter" class="smooth-scroll">Counter</a></li>
+                    <li><a href="#gallery" class="smooth-scroll">Gallery</a></li>
+                    <li><a href="#accordion" class="smooth-scroll">FAQ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 data-aos="fade-down">jQuery Plugins & Advanced Features</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Explore the power of jQuery with these interactive demos showcasing popular plugins and effects.</p>
+            <a href="#jquery-ui" class="btn smooth-scroll" data-aos="zoom-in" data-aos-delay="400">Get Started</a>
+        </div>
+    </section>
+
+    <!-- jQuery UI Section -->
+    <section id="jquery-ui">
+        <div class="container">
+            <h2 class="section-title">jQuery UI Components</h2>
+            
+            <div class="demo-box" data-aos="fade-right">
+                <h3>Datepicker</h3>
+                <p>Select a date with the interactive calendar:</p>
+                <input type="text" id="datepicker" placeholder="Click to select a date">
+            </div>
+            
+            <div class="demo-box" data-aos="fade-left">
+                <h3>Dialog</h3>
+                <p>Click the button to open a dialog box:</p>
+                <button id="open-dialog" class="btn">Open Dialog</button>
+                
+                <div id="dialog" title="Welcome Message">
+                    <p>This is a jQuery UI Dialog. It's a versatile window that can display content, forms, or messages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section id="counter" class="counter-section">
+        <div class="container">
+            <h2 class="section-title">Animated Counters</h2>
+            <p data-aos="fade-up">Watch these numbers animate as you scroll to this section:</p>
+            
+            <div class="counter-container">
+                <div class="counter-item" data-aos="zoom-in">
+                    <div class="counter" data-count="1250">10</div>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="counter" data-count="350">10</div>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="counter" data-count="95">10</div>
+                    <p>Team Members</p>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="counter" data-count="12">10</div>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Lightbox -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Image Gallery with Lightbox</h2>
+            <p data-aos="fade-up">Click on any image to open it in a lightbox view:</p>
+            
+            <div class="gallery">
+                <a href="https://images.unsplash.com/photo-1506744038136-46273834b3fb" data-lightbox="gallery" data-title="Mountain Landscape">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mountain Landscape">
+                </a>
+                <a href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" data-lightbox="gallery" data-title="Forest Path">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Forest Path">
+                </a>
+                <a href="https://images.unsplash.com/photo-1439066615861-d1af74d74000" data-lightbox="gallery" data-title="Lake View">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lake View">
+                </a>
+                <a href="https://images.unsplash.com-1441974231531-c6227db76b6e" data-lightbox="gallery" data-title="Misty Forest">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Misty Forest">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section id="accordion">
+        <div class="container">
+            <h2 class="section-title">FAQ Accordion</h2>
+            <p data-aos="fade-up">Click on each question to expand and see the answer:</p>
+            
+            <div class="accordion-container" data-aos="fade-up">
+                <div id="accordion-widget">
+                    <h3>What is jQuery?</h3>
+                    <div>
+                        <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+                    </div>
+                    
+                    <h3>What are jQuery plugins?</h3>
+                    <div>
+                        <p>jQuery plugins are pieces of code that extend jQuery's functionality. They allow developers to add specific features and effects to their websites without having to write the code from scratch.</p>
+                    </div>
+                    
+                    <h3>What is jQuery UI?</h3>
+                    <div>
+                        <p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. It provides components like datepicker, accordion, dialog, and more.</p>
+                    </div>
+                    
+                    <h3>How do I include jQuery in my project?</h3>
+                    <div>
+                        <p>You can include jQuery in your project by adding a script tag that references the jQuery library, either by downloading it and hosting it yourself or by using a CDN (Content Delivery Network) link.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>jQuery Plugins Demo &copy; 2023 | Created for educational purposes</p>
+        </div>
+    </footer>
+
+
+
+   
+
+
+
+ 
+
+    <!-- Modal Popup -->
+    <div id="modal-overlay"></div>
+    <div id="modal-popup">
+        <span class="close-modal">&times;</span>
+        <h2>Special Offer!</h2>
+        <p>Thank you for scrolling through our demo! We hope you enjoyed learning about jQuery plugins and advanced features.</p>
+        <p>Subscribe to our newsletter for more web development tutorials and resources.</p>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your email address" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+            <button type="submit" class="btn">Subscribe Now</button>
+        </form>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        ↑
+    </div>
+
+    <script>
+        // Document Ready
+        $(document).ready(function() {
+            
+            // Initialize AOS (Animate On Scroll)
+            AOS.init({
+                duration: 3000,
+                once: false,
+                offset: 100
+            });
+
+
+
+
+            
+            // Initialize jQuery UI Datepicker
+            $("#datepicker").datepicker({
+                dateFormat: 'dd/mm/yy',
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true
+            });
+            
+            // Initialize jQuery UI Dialog
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                width: 'auto',
+                buttons: {
+                    "OK": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            
+            // Open Dialog Button
+            $("#open-dialog").on("click", function() {
+                $("#dialog").dialog("open");
+            });
+            
+            // Initialize jQuery UI Accordion
+            $("#accordion-widget").accordion({
+                collapsible: true,
+                heightStyle: "content",
+                active: false
+            });
+            
+            // Initialize Smooth Scroll
+            $(".smooth-scroll").smoothScroll({
+                speed: 800,
+                offset: -70
+            });
+            
+            // Initialize CounterUp with Waypoints
+            $('.counter').each(function() {
+                var $this = $(this);
+                var counterValue = $this.attr('data-count');
+                
+                // Set up waypoint for each counter
+                $this.waypoint(function() {
+                    $this.counterUp({
+                        delay: 10,
+                        time: 1500
+                    });
+                }, {
+                    offset: '90%',
+                    triggerOnce: true
+                });
+            });
+            
+            // Initialize Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'imageFadeDuration': 300,
+                'positionFromTop': 50
+            });
+            
+            // Back to Top Button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            });
+            
+            $('#back-to-top').click(function() {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // Modal Popup on Scroll
+            let modalShown = false;
+            
+            $(window).scroll(function() {
+                // Show modal when user scrolls 70% down the page
+                if (!modalShown && $(window).scrollTop() > ($(document).height() - $(window).height()) * 0.7) {
+                    $('#modal-popup, #modal-overlay').fadeIn(300);
+                    modalShown = true;
+                }
+            });
+            
+            // Close Modal
+            $('.close-modal, #modal-overlay').click(function() {
+                $('#modal-popup, #modal-overlay').fadeOut(300);
+            });
+            
+            // Newsletter Form Submission
+            $('#newsletter-form').submit(function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                $('#modal-popup, #modal-overlay').fadeOut(300);
+            });
+            
+            // Mobile Menu Toggle
+            $('.hamburger').click(function() {
+                $('.nav-links').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            $('.nav-links a').click(function() {
+                $('.nav-links').removeClass('active');
+                $('.hamburger').removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
